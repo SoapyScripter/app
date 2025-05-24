@@ -10,7 +10,7 @@ db_config = {
     'database': 'postgres',
     'user': 'basc',
     'password': '1217',
-    'port': 1217,
+    'port': 5432,
     'sslmode': 'require'
 }
 
