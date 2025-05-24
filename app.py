@@ -22,6 +22,7 @@ def post_data():
     data = request.json
     type = data.get('posttype')
     if type == "create":
+        connection = None
         try:
             username = data.get('username')
             password = data.get('password')
@@ -50,6 +51,7 @@ def post_data():
                 cursor.close()
                 connection.close()
     elif type == "login":
+        connection = None
         try:
             connection = get_connection()
             cursor = connection.cursor()
@@ -70,6 +72,7 @@ def post_data():
                 cursor.close()
                 connection.close()
     elif type == "thread":
+        connection = None
         try:
             connection = get_connection()
             cursor = connection.cursor()
@@ -88,6 +91,7 @@ def post_data():
                 cursor.close()
                 connection.close()
     elif type == "post":
+        connection = None
         try:
             connection = get_connection()
             cursor = connection.cursor()
@@ -106,6 +110,7 @@ def post_data():
                 cursor.close()
                 connection.close()
     elif type == "view":
+        connection = None
         try:
             connection = get_connection()
             cursor = connection.cursor()
@@ -122,6 +127,7 @@ def post_data():
                 cursor.close()
                 connection.close()
     elif type == "logout":
+        connection = None
         try:
             connection = get_connection()
             cursor = connection.cursor()
@@ -136,6 +142,7 @@ def post_data():
                 cursor.close()
                 connection.close()
     elif type == "point":
+        connection = None
         try:
             connection = get_connection()
             cursor = connection.cursor()
@@ -156,6 +163,7 @@ def post_data():
 
 @app.route('/forumsthreads', methods=['GET'])
 def forumthreads():
+    connection = None
     try:
         connection = get_connection()
         cursor = connection.cursor()
@@ -173,6 +181,7 @@ def forumthreads():
 
 @app.route('/dynapoints', methods=['GET'])
 def dynapoints():
+    connection = None
     try:
         connection = get_connection()
         cursor = connection.cursor()
@@ -190,6 +199,7 @@ def dynapoints():
 
 @app.route('/forumsposts', methods=['GET'])
 def forumposts():
+    connection = None
     try:
         connection = get_connection()
         cursor = connection.cursor()
@@ -206,6 +216,7 @@ def forumposts():
 
 @app.route('/threadviews', methods=['GET'])
 def threadviews():
+    connection = None
     try:
         connection = get_connection()
         cursor = connection.cursor()
@@ -229,6 +240,7 @@ def server2():
 
 @app.route('/loggedin', methods=['GET'])
 def roblox():
+    connection = None
     try:
         connection = get_connection()
         cursor = connection.cursor()
@@ -246,6 +258,7 @@ def roblox():
 
 @app.route('/users', methods=['GET'])
 def get_users():
+    connection = None
     try:
         connection = get_connection()
         cursor = connection.cursor()
