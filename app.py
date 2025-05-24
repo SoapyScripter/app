@@ -8,7 +8,7 @@ app = Flask(__name__)
 db_config = {
     'host': 'db.qxshcxyzuahybqgmxjab.supabase.co',
     'database': 'postgres',
-    'user': 'basc',
+    'user': 'postgres',
     'password': '1217',
     'port': 5432,
     'sslmode': 'require'
