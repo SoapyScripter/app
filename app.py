@@ -9,7 +9,7 @@ db_config = {
     'host': 'db.qxshcxyzuahybqgmxjab.supabase.co',
     'database': 'postgres',
     'user': 'postgres',
-    'password': '1217',
+    'password': 'basc1217chillfrog',
     'port': 5432,
     'sslmode': 'require'
 }
