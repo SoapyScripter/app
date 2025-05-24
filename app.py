@@ -6,13 +6,14 @@ import time
 app = Flask(__name__)
 
 db_config = {
-    'host': 'db.qxshcxyzuahybqgmxjab.supabase.co',
-    'database': 'postgres',
-    'user': 'postgres',
-    'password': 'basc1217chillfrog',
+    'host': 'ep-damp-darkness-aabzunhk-pooler.westus3.azure.neon.tech',
+    'database': 'neondb',
+    'user': 'neondb_owner',
+    'password': 'npg_Uo62MdzjHfEm',
     'port': 5432,
     'sslmode': 'require'
 }
+
 
 def get_connection():
     return psycopg2.connect(**db_config, cursor_factory=RealDictCursor)
